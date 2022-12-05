@@ -8,6 +8,7 @@ class HomePageA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetRouterOutlet.builder(
+      routerDelegate: Get.rootDelegate,
       builder: (context, delegate, currentRoute) {
         return Scaffold(
           body: Row(
@@ -48,7 +49,8 @@ class HomePageA extends StatelessWidget {
                 flex: 3,
                 child: GetRouterOutlet(
                   initialRoute: Routes.c,
-                  key: Get.nestedKey(Routes.homeA),
+                  anchorRoute: Routes.homeA,
+                  delegate: Get.rootDelegate,
                 ),
               ),
             ],

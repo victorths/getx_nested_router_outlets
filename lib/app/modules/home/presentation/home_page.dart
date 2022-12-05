@@ -8,6 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetRouterOutlet.builder(
+      routerDelegate: Get.rootDelegate,
       builder: ((context, delegate, currentRoute) {
         return Scaffold(
           appBar: AppBar(
@@ -40,7 +41,8 @@ class HomePage extends StatelessWidget {
           ),
           body: GetRouterOutlet(
             initialRoute: Routes.homeA,
-            key: Get.nestedKey(Routes.home),
+            anchorRoute: Routes.home,
+            delegate: Get.rootDelegate,
           ),
         );
       }),

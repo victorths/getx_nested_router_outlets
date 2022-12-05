@@ -12,6 +12,8 @@ class RootPage extends StatelessWidget {
         return Scaffold(
           body: GetRouterOutlet(
             initialRoute: Routes.signIn,
+            anchorRoute: Routes.root,
+            key: Get.nestedKey(Routes.root),
           ),
         );
       },

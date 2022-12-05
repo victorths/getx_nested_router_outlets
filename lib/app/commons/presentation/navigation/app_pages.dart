@@ -12,8 +12,8 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.root,
-      page: () => const RootPage(),
       participatesInRootNavigator: true,
+      page: () => const RootPage(),
       children: [
         GetPage(
           name: _Paths.signIn,
@@ -22,10 +22,12 @@ class AppPages {
         GetPage(
           name: _Paths.home,
           preventDuplicates: true,
+          participatesInRootNavigator: true,
           page: () => const HomePage(),
           children: [
             GetPage(
               name: _Paths.homeA,
+              participatesInRootNavigator: true,
               page: () => const HomePageA(),
               children: [
                 GetPage(

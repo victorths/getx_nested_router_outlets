@@ -18,7 +18,7 @@ class SignInPage extends StatelessWidget {
               height: 40,
             ),
             ElevatedButton(
-              onPressed: () => Get.rootDelegate.toNamed(Routes.home),
+              onPressed: () => Get.rootDelegate.offAndToNamed(Routes.home),
               child: const Text('Go to homePage'),
             ),
           ],
